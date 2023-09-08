@@ -1,1 +1,9 @@
-<p>recipe-item works!</p>
+<a href="#" class="list-group-item d-flex" (click)="showRecipeDetails()">
+  <div>
+    <h4>{{ recipe.name }}</h4>
+    <p>{{ recipe.description }}</p>
+  </div>
+  <span class="w-100 d-flex align-items-center">
+    <img [src]="recipe.imagePath" alt="{{ recipe.name }}" class="w-100" />
+  </span>
+</a>
