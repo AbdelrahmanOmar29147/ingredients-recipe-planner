@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,16 +7,13 @@ import { Component, EventEmitter, Output } from '@angular/core';
     `
       .show + .dropdown-menu {
         display: block;
-        transform: translate(-70px, -7px);
+      }
+      .active {
+        background-color: #e3f2fd;
       }
     `,
   ],
 })
 export class HeaderComponent {
-  @Output() featureSelected = new EventEmitter<string>();
   collapsed = true;
-
-  onSelect(feature: string) {
-    this.featureSelected.emit(feature);
-  }
 }
